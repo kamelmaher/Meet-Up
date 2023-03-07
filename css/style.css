@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Dosis:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+:root {
+    --main-color: #016cc7;
+    --second-color: #dd5138;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Dosis', sans-serif;
+}
+button {
+    background-color: var(--second-color) !important;
+    transition: .4s;
+    color: white;
+}
+button:hover {
+    color: black !important;
+}
+a {
+    text-decoration: none;
+}
+/* Menu */
+.menu {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 200px;
+    z-index: 2252525;
+}
+.menu .circle {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: var(--second-color);
+    margin-left: 15px;
+    transition: .3s;
+    cursor: pointer;
+}
+.menu .circle:hover {
+    transform: scale(1.8);
+}
+.menu a {
+    color: white;
+    padding: 10px 15px;
+    background-color: var(--second-color);
+    border-radius: 7px;
+    opacity: 0;
+    transition: .3s;
+}
+/* Menu */
+/* Start Main*/
+main {
+    background-color: var(--main-color);
+    min-height: 100vh;
+}
+main .rocket {
+    animation: move 1.2s linear  infinite alternate;
+}
+@keyframes move {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50px);
+    }
+}
+/* End Main*/
+/* Start Features */
+.features .card i {
+    font-size: 60px;
+}
+.features .card p {
+    color: #404142;
+}
+/* End Features */ 
+
+/* End Speakers */ 
+.speakers img {
+    width: 150px;
+    border: 3px solid #efefef;
+    border-radius: 50%;
+}
+.speakers .row > div >div{
+    border: 3px solid #f6f6f6;
+    transition: .5s;
+    padding: 20px 30px;
+}
+.speakers .row > div >div:hover {
+    box-shadow: 3px 3px 10px #ccc;
+    transform: translateY(-10px);
+}
+/* End Speakers */ 
+
+/* Start Buy */ 
+.buy {
+    background-color: #fcd93b;
+}
+.price {
+    color: var(--second-color);
+    font-size: 60px;
+    font-weight: lighter;
+}
+/* End Buy */
+
+/* Start Schedule */      
+.schedule .day {
+    border-bottom: 1px solid #ddd;
+}
+.day ul {
+    margin-bottom: 0 !important;
+}
+.day li {
+    padding: 16px;
+    cursor: pointer;
+    color: var(--main-color);
+    border: 1px solid transparent;
+}
+.day li.active {
+    border-color : #ddd #ddd white #ddd;
+    color: #404142;
+}
+.day li:hover {
+    background-color: #eee;
+}
+.schedule .text span {
+    font-weight: 600;
+}
+/* End Schedule */      
+
+/* Start Contact */      
+.contact {
+    background-color: #2a2a2a;
+}
+.contact input {
+    border: 0;
+    padding: 7px 10px;
+}
+.contact input:focus , .contact textarea:focus {
+    outline: 0;
+}
+.contact button {
+    background-color: #fcd93b !important;
+}
+.contact .text:not(:last-child) {
+    border-bottom: 1px solid white;
+}
+.contact .text a {
+    transition: .2s;
+}
+.contact .text a:hover {
+    opacity: 1 !important;
+}
+/* End Contact */      
